@@ -1,0 +1,24 @@
+<div class="col-4 card" style="width: 18rem;">
+  <% if contact.photo.attached? %>
+  <%= image_tag contact.photo, style: "width: 285px; height: 285px;" %>
+  <% else %>
+    Pas de photo
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= contact.first_name %> <%= contact.last_name %> </h5>
+    <p>
+    <strong>Email:</strong>
+    <%= contact.email %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= contact.phone %>
+  </p>
+
+  <p>
+    <strong>Twitter:</strong>
+    <%= contact.twitter %>
+  </p>
+  </div>
+</div>

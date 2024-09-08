@@ -1,0 +1,21 @@
+<h2>Connexion</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"form-control", autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field form-group my-3">
+    <%= f.label 'Mot de passe' %><br />
+    <%= f.password_field :password, class:"form-control", autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Se connecter", class:'btn btn-secondary' %>
+  </div>
+<% end %>
+
+<br/>
+
+<%= render "devise/shared/links" %>

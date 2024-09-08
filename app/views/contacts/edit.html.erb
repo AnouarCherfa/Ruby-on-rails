@@ -1,0 +1,12 @@
+<% content_for :title, "Editing contact" %>
+
+<h1>Modifier le contact</h1>
+
+<%= render "form", contact: @contact %>
+
+<br>
+
+<div>
+  <%= link_to "Voir ce contact", @contact, class:"btn btn-light" %>
+  <%= link_to "retour à l'annuaire", contacts_path, class:"btn btn-light" %>
+</div>

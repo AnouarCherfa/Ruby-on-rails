@@ -1,0 +1,23 @@
+
+<% content_for :title, "Contacts" %>
+
+<div class="row">
+
+<%= link_to "Ajouter un contact", new_contact_path, class:"btn btn-info" %>
+
+<h1>Annuaire de contact</h1>
+
+</div>
+
+<div id="contacts" class="row">
+  <% @contacts.each do |contact| %>
+      <div class="col-4 mb-4">
+        <div class="mb-2">
+          <%= render contact %>
+        </div>
+        <div>
+<%= link_to "Voir ce contact", contact, class:"btn btn-light" %>
+        </div>
+    </div>
+  <% end %>
+</div>

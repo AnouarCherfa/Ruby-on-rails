@@ -1,0 +1,18 @@
+<div class="row">
+<div class="d-flex justify-content-center">
+  <%= render @contact %>
+</div>
+
+<div class="d-flex justify-content-center my-2 gap-2">
+  <div>
+<%= link_to "Modifier ce contact", edit_contact_path(@contact), class:"btn btn-info" %>
+  </div>
+  <div>
+      <%= button_to "Supprimer ce contact", @contact, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <%= link_to "Retour à l'annuaire", contacts_path, class:"btn btn-light" %>
+</div>
+
+</div>
